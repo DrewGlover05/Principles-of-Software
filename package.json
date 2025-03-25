@@ -4,7 +4,7 @@
   "description": "SOFE 2720 Lab 5 - JavaScript Testing and Continuous Integration",
   "main": "search.js",
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
   "author": "Kiran",
   "license": "ISC",
