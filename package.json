@@ -1,0 +1,14 @@
+{
+  "name": "lab5-js-testing-ci",
+  "version": "1.0.0",
+  "description": "SOFE 2720 Lab 5 - JavaScript Testing and Continuous Integration",
+  "main": "search.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Kiran",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
