@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # or 18, whichever you're using
+
+      - name: Install dependencies
+        run: npm ci  # or npm install
+
+      # Only necessary if you get "Permission denied" for Jest
+      - name: Fix Jest permissions
+        run: chmod +x node_modules/.bin/jest
+
+      - name: Run tests
+        run: npm test
